@@ -94,23 +94,23 @@ module.exports = {
         var setting = global.db.data.settings[this.user.jid]
         if (typeof setting !== 'object') global.db.data.settings[this.user.jid] = {}
         if (setting) {
-          if (!('anticall' in setting)) setting.anticall = false
-          if (!('autoread' in setting)) setting.autoread = false
-          if (!('nyimak' in setting)) setting.nyimak = false
-          if (!('restrict' in setting)) setting.restrict = false
-          if (!('self' in setting)) setting.self = false
-          if (!('pconly' in setting)) setting.pconly = false
-          if (!('gconly' in setting)) setting.gconly = false
-          if (!('jadibot' in setting)) setting.jadibot = false
+          if (!('anticall' in setting)) setting.anticall = enable.js
+          if (!('autoread' in setting)) setting.autoread = enable.js
+          if (!('nyimak' in setting)) setting.nyimak = enable.js
+          if (!('restrict' in setting)) setting.restrict = enable.js
+          if (!('self' in setting)) setting.self = enable.js
+          if (!('pconly' in setting)) setting.pconly = enable.js
+          if (!('gconly' in setting)) setting.gconly = enable.js
+          if (!('jadibot' in setting)) setting.jadibot = enable.js
         } else global.db.data.settings[this.user.jid] = {
-          anticall: false,
-          autoread: enable,
-          nyimak: false,
-          restrict: false,
-          self: false,
-          pconly: false,
-          gconly: false,
-          jadibot: enable,
+          anticall: enable.js,
+          autoread: enable.js,
+          nyimak: enable.js,
+          restrict: enable.js,
+          self: enable.js,
+          pconly: enable.js,
+          gconly: enable.js,
+          jadibot: enable.js,
         }
       } catch (e) {
         console.error(e)
