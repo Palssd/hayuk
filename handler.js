@@ -76,19 +76,19 @@ module.exports = {
           if (!('simi' in chat)) chat.simi = false
           if (!('viewonce' in chat)) chat.viewonce = false
         } else global.db.data.chats[m.chat] = {
-          isBanned: false,
-          welcome: false,
+          isBanned: true,
+          welcome: true,
           detect: false,
           sWelcome: '',
           sBye: '',
           sPromote: '',
           sDemote: '',
           delete: true,
-          antiLink: false,
+          antiLink: true,
           antiSticker: false,
           getmsg: false,
-          simi: false,
-          viewonce: false,
+          simi: true,
+          viewonce: true,
         }
 
         var setting = global.db.data.settings[this.user.jid]
@@ -104,13 +104,13 @@ module.exports = {
           if (!('jadibot' in setting)) setting.jadibot = false
         } else global.db.data.settings[this.user.jid] = {
           anticall: false,
-          autoread: false,
+          autoread: enable,
           nyimak: false,
           restrict: false,
           self: false,
           pconly: false,
           gconly: false,
-          jadibot: false,
+          jadibot: enable,
         }
       } catch (e) {
         console.error(e)
