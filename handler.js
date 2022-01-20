@@ -76,32 +76,32 @@ module.exports = {
           if (!('simi' in chat)) chat.simi = false
           if (!('viewonce' in chat)) chat.viewonce = false
         } else global.db.data.chats[m.chat] = {
-          isBanned: true,
-          welcome: true,
+          isBanned: false,
+          welcome: false,
           detect: false,
           sWelcome: '',
           sBye: '',
           sPromote: '',
           sDemote: '',
-          delete: true,
-          antiLink: true,
+          delete: false,
+          antiLink: false,
           antiSticker: false,
           getmsg: false,
-          simi: true,
-          viewonce: true,
+          simi: false,
+          viewonce: false.
         }
 
         var setting = global.db.data.settings[this.user.jid]
         if (typeof setting !== 'object') global.db.data.settings[this.user.jid] = {}
         if (setting) {
-          if (!('anticall' in setting)) setting.anticall = enable.js
-          if (!('autoread' in setting)) setting.autoread = enable.js
-          if (!('nyimak' in setting)) setting.nyimak = enable.js
-          if (!('restrict' in setting)) setting.restrict = enable.js
-          if (!('self' in setting)) setting.self = enable.js
-          if (!('pconly' in setting)) setting.pconly = enable.js
-          if (!('gconly' in setting)) setting.gconly = enable.js
-          if (!('jadibot' in setting)) setting.jadibot = enable.js
+          if (!('anticall' in setting)) setting.anticall = false
+          if (!('autoread' in setting)) setting.autoread = false
+          if (!('nyimak' in setting)) setting.nyimak = false
+          if (!('restrict' in setting)) setting.restrict = false
+          if (!('self' in setting)) setting.self = false
+          if (!('pconly' in setting)) setting.pconly = false
+          if (!('gconly' in setting)) setting.gconly = false
+          if (!('jadibot' in setting)) setting.jadibot = false
         } else global.db.data.settings[this.user.jid] = {
           anticall: enable.js,
           autoread: enable.js,
